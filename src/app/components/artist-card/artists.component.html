@@ -1,0 +1,7 @@
+<div class="artist-card" (click)="handleClick($event)">
+    <img class="avatar" alt="avatar" [src]="avatar" />
+    <div class="details">
+        <span>{{ name }}</span>
+        <span *ngIf="numFans">{{ numFans }}</span>
+    </div>
+</div>

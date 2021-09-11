@@ -1,0 +1,10 @@
+<section *ngIf="searchResults$ | async as searchResults" class="content">
+    <h2>Search results</h2>
+    <div class="artists-container">
+        <app-artist-card *ngFor="let result of searchResults?.data | uniqueartist"
+            (clickEvent)="artistDetails(result.id)"
+            [name]="result.name"
+            [avatar]="result.picture_medium"
+        ></app-artist-card>
+    </div>
+</section>

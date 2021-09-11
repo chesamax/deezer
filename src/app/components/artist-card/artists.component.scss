@@ -1,0 +1,27 @@
+@import 'src/assets/styles/colors';
+
+.artist-card {
+    background-color: $secondary-color;
+    color: $white;
+    width: 250px;
+    border-radius: 3px;
+    box-shadow: 4px 4px 8px $grey-1;
+    cursor: pointer;
+    .avatar {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    .details {
+        margin: 0 10px;
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &:first-child {
+                display: block;
+                font-size: 1.1em;
+            }
+        }
+        
+    }
+}

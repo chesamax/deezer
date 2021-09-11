@@ -1,0 +1,52 @@
+@import 'src/assets/styles/colors';
+
+.content {
+    margin: 10px;
+    .artist-container {
+        display: flex;
+        box-shadow: 4px 4px 8px $grey-1;
+        margin-bottom: 50px;
+        @media screen and (max-width: 900px ) {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .details {
+            flex: 1;
+            background-color: $secondary-color;
+            color: $white;
+            padding: 50px;
+            display: flex;
+            gap: 40px;
+            @media screen and (max-width: 600px ) {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px !important;
+            }
+            .avatar {
+                width: 200px;
+            }
+            .personal-details {
+                span {
+                    &:first-child {
+                        display: block;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+        .top-list {
+            flex: 1;
+            background-color: $primary-color;
+            color: $white;
+            h2 {
+                padding: 5px;
+            }
+        }
+    }
+    .albums {
+        display: flex;
+        gap: 20px;
+        overflow-x: scroll;
+        padding: 20px 20px 20px 0;
+    }
+}

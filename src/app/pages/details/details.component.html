@@ -1,0 +1,23 @@
+<section class="content">
+    <div class="artist-container">
+        <section *ngIf="artist$ | async as artist" class="details">
+            <img class="avatar" [src]="artist.picture_big" alt="avatar" />
+            <div class="personal-details">
+                <span>{{ artist.name }}</span>
+                <span>{{ artist.nb_fan | toK }} Fans</span>
+            </div>
+        </section>
+        <section *ngIf="topSongs$ | async as topSongs" class="top-list">
+            <h2>Top Songs</h2>
+            <app-song-item *ngFor="let song of topSongs.data" [title]="song.title" [artist]="song.artist.name" [cover]="song.album.cover_small"></app-song-item>
+        </section>
+    </div>
+    <h2>Albums</h2>
+    <section *ngIf="albums$ | async as albums" class="albums">
+        <app-artist-card *ngFor="let album of albums.data"
+            [name]="album.title"
+            [numFans]="album.release_date | date: 'y'"
+            [avatar]="album.cover_medium"
+        ></app-artist-card>
+    </section>
+</section>

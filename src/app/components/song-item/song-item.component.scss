@@ -1,0 +1,18 @@
+@import 'src/assets/styles/colors';
+
+.song-item {
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    .song-details {
+        display: flex;
+        flex-direction: column;
+        padding-top: 7px;
+        .title {
+            font-size: 1.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
