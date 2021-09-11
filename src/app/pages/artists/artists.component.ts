@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
 import { DeezerService } from "src/app/servises/deezer.service";
 
-import * as _ from 'lodash';
 import { ActivatedRoute, Params, Router } from "@angular/router";
 
 

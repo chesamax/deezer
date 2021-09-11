@@ -9,18 +9,11 @@ import * as _ from 'lodash'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   artistName$ = new Subject<string>();
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    this.artistName$.pipe(
-      debounceTime(500),
-      distinctUntilChanged(),
-      )
-  }
-  
   getValue(event: Event): string {
     return (event.target as HTMLInputElement).value;
   }
